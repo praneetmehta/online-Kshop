@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8"/>
+		<meta http-equiv="refresh" content="2" >
+		<title>File Download</title>
+	</head>
+
+	<body>
+	<h3><a href="../">Go Back</a></h3>
+	<table>
+		<tr>
+    		<th>File Name</th>
+    		
+    		<th>Details</th>
+    		
+    		<th>Status</th>
+  		</tr>
+	<% for(var i=0;i<files.length;i++){%>
+		<tr>
+			<td><%= files[i].filename %></td>
+			
+			<td>
+				<ul style="list-style:none">
+					<li style="text-align:center"><%= files[i].details.color %></li>
+					<li style="text-align:center">Pages: <%= files[i].details.pages %></li>
+					<li style="text-align:center">Copies: <%= files[i].details.copies %></li>
+				</ul>
+			</td>
+			
+			<td><button type="button" style="background:   <% if(files[i].status == -1){ %>
+					red">Rejected</button>
+				<%else if(files[i].status == 0){ %>
+					red">Being Verified</button>
+				<%else if(files[i].status == 1){ %>
+					red">Pending</button>
+				<%}else if(files[i].status == 2){ %>
+					yellow">Downloaded</button>
+				<%}else if(files[i].status == 3){%>
+					green">Printed</button><br><p>Rs. <%= files[i].cost%></p>
+				<%}%>
+			</td>
+		</tr>
+	<%}%>
+	</table>
+	<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Login</title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   	 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
+		<link rel="stylesheet" href="/stylesheets/signup.css">
+		    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+
+
+	</head>
+	<body>
+	
+		
+		<div class="container">
+			<div class="row">
+				<div class="form-wrapper">
+					<h1 style="margin-bottom:20px"><span class="glyphicon glyphicon-user"> Login</h1>
+					<form id="loginForm" role="form" style="text-align: center" action="login" method="POST">
+						<div class="form-group">
+							<input id="username" style="outline:none" type="text" name="username" placeholder="Username" required>
+						</div>
+						<div class="form-group">
+							<input id ="pwd" style="outline:none" type="password" name="pwd" placeholder="password" required>
+						</div>
+						<input type="submit"><br><br>
+						 <a href="/users/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+						 <a href="http://karaturi.ddns.net:3000/users/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+
+
+					</form>
+					</br>
+					<h4>Or else <a href="signup">Sign Up</a> or Go <a href="../">Back</a></h4>
+				</div>
+			</div>
+		</div>
+		<script>
+			$('#username').focus(function(){
+				$(this).css({
+					'transition': 'all .3s',
+					'padding-left': '20px',
+					'border':'2px solid black'
+				});
+			});
+			$('#username').blur(function(){
+				$(this).css({
+					'transition': 'all .2s',
+					'padding-left': '10px',
+					'border':'2px solid gray'
+				});
+			});
+			$('#pwd').focus(function(){
+				$(this).css({
+					'transition': 'all .3s',
+					'padding-left': '20px',
+					'border':'2px solid black'
+				});
+			});
+			$('#pwd').blur(function(){
+				$(this).css({
+					'transition': 'all .2s',
+					'padding-left': '10px',
+					'border':'2px solid gray'
+				});
+			});
+			window.onload = function(){
+				$('.form-wrapper').css({
+					'opacity':'1'
+				});
+			}
+		</script>
+	</body>
+</html>

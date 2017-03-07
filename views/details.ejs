@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  </head>
+  <body>
+  <a href="../">Go Back</a>
+   <table>
+   	<th>Unattended</th>
+   	<th><%= files.length %></th>
+   </table>
+   <table>
+		<tr>
+		  <th>Filename</th>
+		  <th>User</th>
+		  <th>Details</th>
+		  <th>Cost</th>
+		  <th>Status</th>			
+		</tr>
+		<% for(var i=0;i<files.length;i++){ %>
+		<tr>
+		  <th><%= files[i].filename%></th>
+		  <th><%= files[i].username%></th>
+		  <th><ul>
+		  	<li><%= files[i].details.color%></li>
+		  	<li>Pages= <%= files[i].details.pages%></li>
+		  	<li>Copies= <%= files[i].details.copies%></li>
+		  </ul></th>
+		  <th>
+			  
+			
+			<br>
+		  	<input name="cash" id="cash<%= files[i]._id%>" type="number"  value="<%= files[i].cost%>">
+		  	<a href="" onclick="this.href='modifycash?id=<%=files[i]._id%>&cost='+document.getElementById('cash<%= files[i]._id%>').value">Confirm</a>
+			  
+		  </th>
+		  <th><button><a href="changedispatchstatus?id=<%= files[i]._id%>">Confirmed</a></button></th>
+		</tr>
+		<%}%>
+   </table>
+  
+   	<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+  </body>
+</html>

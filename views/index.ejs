@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>File Upload</title>
+
+		<!-- Google web fonts -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+
+		<!-- The main CSS file -->
+		<link href="assets/css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div style="font-family:'PT Sans Narrow', sans-serif" class="modal-content">
+		    <div class="modal-header">
+		      <span class="close">&times</span>
+		      <h2>Dear User,</h2>
+		    </div>
+		    <div class="modal-body">
+		      <p>To ensure a spam free service Only text files can be shared using this service</p>
+		      <p>Formats supported = .pdf, .txt, .xls, .xlsx, .ppt, .pptx, .docx</p>
+		    </div>
+		    <div class="modal-footer">
+		      <h3>Happy Sharing :)</h3>
+		    </div>
+		  </div>
+
+		</div>
+
+		
+		<form id="upload" method="post" action="upload" enctype="multipart/form-data">
+			<div id="drop">
+				Drop Here
+
+				<a>Browse</a>
+				<input type="file" name="upload" multiple />
+			</div>
+
+			<ul>
+				<!-- The file uploads will be shown here -->
+			</ul>
+
+		</form>
+
+		
+        <script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// when window loads
+		window.onload = function() {
+		   	modal.style.display = "block";
+		}
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+		</script>
+		<!-- JavaScript Includes -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="assets/js/jquery.knob.js"></script>
+
+		<!-- jQuery File Upload Dependencies -->
+		<script src="assets/js/jquery.ui.widget.js"></script>
+		<script src="assets/js/jquery.iframe-transport.js"></script>
+		<script src="assets/js/jquery.fileupload.js"></script>
+		
+		<!-- Our main JS file -->
+		<script src="assets/js/script.js"></script>
+
+
+	</body>
+</html>

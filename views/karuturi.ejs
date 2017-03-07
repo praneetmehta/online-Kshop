@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Button</h2>
+  <p>The .btn-success class indicates a successful or positive action:</p>
+  <button type="submit" class="btn btn-success">Upload</button>
+  <button type="button" class="btn btn-primary" onclick="loadDoc()">This</button>
+</div>
+
+<form action="upload" method="post" enctype="multipart/form-data">
+<input type="file" name="fileToUpload" id="fileToUpload">
+<input type="submit" class="btn btn-success" name="submit" name="Upload Image">
+</form>
+
+<br>
+<div id="txtHint">Customer info will be listed here...</div>
+
+
+
+<p id="demo"></p>
+
+
+  
+</body>
+</html>

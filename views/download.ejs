@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="refresh" content="5" >
+		<title>File Download</title>
+	</head>
+
+	<body>
+	<div class="status">
+		<table class="status_table">
+			<tr>
+				<td>Unattended</td>
+				<td><%= unattended %></td>
+			</tr>
+			<tr>
+				<td>Downloaded</td>
+				<td><%= downloaded %></td>
+			</tr>
+		</table>
+	</div>
+	<table>
+		<tr>
+    		<th>File Name</th>
+    		<th>Username</th>
+    		
+    		<th>Details</th>
+    		<th>Link</th>
+    		<th>Status</th>
+  		</tr>
+	<% for(var i=0;i<files.length;i++){%>
+		<tr>
+			<td><%= files[i].filename %></td>
+			<td><%= files[i].username %></td>
+
+			<td>
+				<ul style="list-style:none">
+					<li style="text-align:center"><%= files[i].details.color %></li>
+					<li style="text-align:center">Pages: <%= files[i].details.pages %></li>
+					<li style="text-align:center">Copies: <%= files[i].details.copies %></li>
+				</ul>
+			</td>
+			<td><a href='/admin/downloadfile?file=<%= files[i].filename%>&name=<%= files[i].username%>' target="_blank">Download</a></td>
+			<td><button type="button" id="<%= files[i]._id %>" style="background: <% if(files[i].status == 1){ %>
+					red"><a href="/admin/statuschange?id=<%= files[i]._id%>" target="_blank">Pending</a></button>
+				<%} else if(files[i].status == 2){ %>
+					yellow"><a href="/admin/statuschange?id=<%= files[i]._id%>" target="_blank">Downloaded</a></button>
+				<%}else if(files[i].status == 3){%>
+					green"><a href="/admin/statuschange?id=<%= files[i]._id%>" target="_blank">Printed</a></button>
+				<%}%>
+			</td>
+		</tr>
+	<%}%>
+	</table>
+	<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+	</body>
+</html>

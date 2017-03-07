@@ -1,0 +1,124 @@
+body{color: #dadfe1;}
+p { color: blue; } 
+h3{ color: white; }
+ #help{
+
+    font-size: 20px;
+  }
+
+  #dbase{
+    display: none;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #f5d76e;
+}
+
+nav{
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.icon-bar{
+	color: white;
+	background-color: white;
+}
+
+.navbar-brand{
+	color: white;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #f5d76e;
+    color: #000000;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #f4d03f;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #f5d76e;
+    box-shadow: none;
+}
+
+.btn-success {
+    background: #f5d76e;
+    color: #000000;
+}
+ 
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
+    background: #f4d03f;
+}
+ 
+.btn-success:active, .btn-success.active {
+    background: #f5d76e;
+    box-shadow: none;
+}
+
+#navigation{
+
+	text-align: right;
+}
+
+.btn.sharp {
+  border-radius:0;
+}
+
+ #all {
+    margin: auto;
+    height: 100%;
+}
+
+#all {
+    display: table;
+    margin: auto;
+}
+
+#all {
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+#karuturi{
+  padding-top: 0px;
+  margin-top: 0px;
+  display: none;
+  background-image: url("../images/bk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  margin-right: 0px;
+  padding-right: 0px;
+
+}
+
+table{
+
+  padding-left: 10%;
+  color: #000000;
+}
+
+div{
+
+  text-align: center;
+}
+
+input{
+  text-align: center;
+}
+
+section{
+  background: url("../images/contactus1.jpg") no-repeat;
+  background-size: cover;
+}

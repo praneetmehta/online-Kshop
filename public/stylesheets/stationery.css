@@ -1,0 +1,45 @@
+#help{
+    font-size: 20px;
+    }
+    #dbase{
+    display: none;
+    }
+    .btns {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    max-width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    }
+    #all {
+    margin: auto;
+    height: 100%;
+    }
+    #all {
+    display: table;
+    margin: auto;
+    }
+    #all {
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+    }
+    #karuturi{
+    display: none;
+    background: url("../images/stationery.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin-right: 0px;
+    padding-right: 0px;
+    }
+    div{
+    text-align: center;
+    }
+    input{
+    text-align: center;
+    }
+    section{
+    background: url("../images/contactus1.jpg") no-repeat;
+    background-size: cover;
+    }

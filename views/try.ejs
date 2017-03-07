@@ -118,5 +118,25 @@
     -->
     
     <script type="text/javascript"  src="javascripts/socket_file_status.js"></script>
+    <script>
+      var morethan1 = document.getElementById("morethan1");
+      var from_page = document.getElementById("from");
+      var to_page = document.getElementById("to");
+
+
+      morethan1.addEventListener("click", function () {
+          from_page.readOnly = !morethan1.checked;
+          to_page.readOnly = !morethan1.checked;
+
+      });
+      from_page.addEventListener("focus", function (evt) {
+          // Checkbox must be checked before data can be entered into textbox
+          from_page.readOnly = !morethan1.checked;
+      })
+      to_page.addEventListener("focus", function (evt) {
+          // Checkbox must be checked before data can be entered into textbox
+          to_page.readOnly = !morethan1.checked;
+      })
+    </script>
   </body>
 </html>
